@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../red_page/red_page.dart';
 import '../blue_page/blue_page.dart';
 import '../green_page/green_page.dart';
+import 'widgets/title_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,55 +31,68 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Container(
-                  height: 8,
-                  width: 8,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.red,
-                  ),
-                ),
-                const SizedBox(width: 10),
-                const Text("Connected"),
-                const SizedBox(width: 5),
-                Container(
-                  height: 4,
-                  width: 4,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.grey,
-                  ),
-                ),
-                const SizedBox(width: 5),
-                const Text("example@gmail.com"),
-                const Expanded(child: SizedBox()),
-                FilledButton(
-                    onPressed: () => {}, child: const Text("Disconnect"))
-              ],
-            ),
-            TabBar(
-              controller: _tabController,
-              tabs: const [
-                Tab(text: 'Red'),
-                Tab(text: 'Green'),
-                Tab(text: "Settings"),
-              ],
-            ),
+            const TitleBar(), // No additional padding for TitleBar
             Expanded(
-              child: TabBarView(
-                controller: _tabController,
-                physics:
-                    const NeverScrollableScrollPhysics(), // Disable swiping
-                children: const [
-                  RedPage(),
-                  GreenPage(),
-                  BluePage(),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 30),
+                    child: Row(
+                      children: [
+                        Container(
+                          height: 8,
+                          width: 8,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.red,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        const Text("Connected"),
+                        const SizedBox(width: 5),
+                        Container(
+                          height: 4,
+                          width: 4,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        const SizedBox(width: 5),
+                        const Text("example@gmail.com"),
+                        const Expanded(child: SizedBox()),
+                        FilledButton(
+                            onPressed: () => {},
+                            child: const Text("Disconnect"))
+                      ],
+                    ),
+                  ),
+                  TabBar(
+                    controller: _tabController,
+                    tabs: const [
+                      Tab(text: 'Red'),
+                      Tab(text: 'Green'),
+                      Tab(text: "Blue"),
+                    ],
+                  ),
+                  Expanded(
+                    child: TabBarView(
+                      controller: _tabController,
+                      physics:
+                          const NeverScrollableScrollPhysics(), // Disable swiping
+                      children: const [
+                        Padding(padding: EdgeInsets.all(30), child: RedPage()),
+                        Padding(
+                            padding: EdgeInsets.all(30), child: GreenPage()),
+                        Padding(padding: EdgeInsets.all(30), child: BluePage()),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
