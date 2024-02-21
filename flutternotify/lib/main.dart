@@ -5,6 +5,6 @@ import 'presentation/app.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {}
+  if (Platform.isWindows || Platform.isMacOS) {}
   runApp(const App());
 }
