@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'themes/default/default_theme.dart'; // Dark theme also exists at 'themes/dark_theme.dart'
+import 'themes/default/theme.dart'; // Dark theme also exists at 'themes/dark_theme.dart'
 import 'pages/home_page/home_page.dart';
 
 class App extends StatelessWidget {
@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: DefaultTheme.theme,
+      theme: DefaultTheme.defaultTheme,
       home: const HomePage(),
     );
   }
