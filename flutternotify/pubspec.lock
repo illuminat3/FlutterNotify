@@ -241,7 +241,7 @@ packages:
     source: hosted
     version: "1.2.0"
   system_tray:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: system_tray
       sha256: "40444e5de8ed907822a98694fd031b8accc3cb3c0baa547634ce76189cf3d9cf"
