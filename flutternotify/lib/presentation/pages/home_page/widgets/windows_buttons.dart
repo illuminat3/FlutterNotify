@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:bitsdojo_window/bitsdojo_window.dart';
+import 'minimize_window_button.dart';
+import 'close_window_button.dart';
 
 class WindowButtons extends StatelessWidget {
   const WindowButtons({super.key});
@@ -8,8 +9,8 @@ class WindowButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        MinimizeWindowButton(),
-        CloseWindowButton(),
+        MinWindowButton(),
+        ClsWindowButton(),
       ],
     );
   }

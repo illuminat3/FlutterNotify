@@ -23,7 +23,6 @@ void main() async {
   await systemTray.setContextMenu(menu);
 
   systemTray.registerSystemTrayEventHandler((eventName) {
-    debugPrint("eventName: $eventName");
     if (eventName == kSystemTrayEventClick) {
       appWindow.show();
     } else if (eventName == kSystemTrayEventRightClick) {
@@ -39,6 +38,7 @@ void main() async {
     appWindow.minSize = initialSize;
     appWindow.size = initialSize;
     appWindow.maxSize = initialSize;
+    appWindow.title = "Mock Ticker Notifier";
     appWindow.show();
   });
 }
