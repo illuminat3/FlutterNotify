@@ -23,7 +23,6 @@ void main() async {
   await systemTray.setContextMenu(menu);
 
   systemTray.registerSystemTrayEventHandler((eventName) {
-    debugPrint("eventName: $eventName");
     if (eventName == kSystemTrayEventClick) {
       appWindow.show();
     } else if (eventName == kSystemTrayEventRightClick) {
