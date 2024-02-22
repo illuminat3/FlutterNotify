@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DefaultTheme {
   static ThemeData get defaultTheme {
-    return ThemeData.dark();
+    return dark;
   }
 
   static ThemeData get dark {
