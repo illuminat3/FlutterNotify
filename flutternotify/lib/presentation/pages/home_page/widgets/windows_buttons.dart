@@ -21,7 +21,9 @@ class WindowButtons extends StatelessWidget {
               MinimizeIcon(color: buttonContext.iconColor),
           onPressed: appWindow.hide,
         ),
-        CloseWindowButton(),
+        CloseWindowButton(
+          colors: windowButtonColors,
+        ),
       ],
     );
   }
