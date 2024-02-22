@@ -38,6 +38,7 @@ void main() async {
     appWindow.minSize = initialSize;
     appWindow.size = initialSize;
     appWindow.maxSize = initialSize;
+    appWindow.title = "Mock Ticker Notifier";
     appWindow.show();
   });
 }
