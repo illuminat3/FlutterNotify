@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
-import '../../../themes/default/theme.dart';
+import 'package:flutternotify/presentation/themes/default/theme.dart';
 
 class WindowButtons extends StatelessWidget {
   const WindowButtons({super.key});
