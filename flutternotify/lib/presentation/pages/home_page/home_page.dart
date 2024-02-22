@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../red_page/red_page.dart';
-import '../blue_page/blue_page.dart';
+import '../settings_page/settings_page.dart';
 import '../green_page/green_page.dart';
 import 'widgets/title_bar.dart';
 
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage>
                     tabs: const [
                       Tab(text: 'Red'),
                       Tab(text: 'Green'),
-                      Tab(text: "Blue"),
+                      Tab(text: "Settings"),
                     ],
                   ),
                   Expanded(
@@ -89,7 +89,8 @@ class _HomePageState extends State<HomePage>
                         Padding(padding: EdgeInsets.all(30), child: RedPage()),
                         Padding(
                             padding: EdgeInsets.all(30), child: GreenPage()),
-                        Padding(padding: EdgeInsets.all(30), child: BluePage()),
+                        Padding(
+                            padding: EdgeInsets.all(30), child: SettingsPage()),
                       ],
                     ),
                   ),
